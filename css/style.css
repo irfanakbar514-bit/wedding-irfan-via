@@ -10,6 +10,12 @@
 body { 
     font-family: 'Montserrat', sans-serif; 
     background-color: var(--cream); 
+    background-image: url('../assets/audio/images/cover/bg-minang.jpg');
+    background-attachment: fixed; /* Supaya background tidak ikut geser saat di-scroll */
+    background-size: cover;
+    background-blend-mode: overlay; /* Menyatukan gambar dengan warna cream */
+    background-color: rgba(249, 247, 242, 0.94); /* Warna cream transparan agar teks tetap jelas */
+    /* -------------------------- */
     color: var(--charcoal); 
     overflow: hidden; 
     scroll-behavior: smooth;
