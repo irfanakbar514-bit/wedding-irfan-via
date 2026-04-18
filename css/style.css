@@ -144,3 +144,17 @@ section { padding: 80px 20px; text-align: center; max-width: 800px; margin: auto
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+/* KODE SAKTI BIAR RAPI */
+.gallery-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important; /* Paksa bagi 2 kolom */
+    gap: 10px !important;
+    padding: 10px !important;
+}
+
+.gallery-grid img {
+    width: 100% !important;
+    height: 180px !important; /* Paksa tinggi sama rata */
+    object-fit: cover !important;
+    border-radius: 8px !important;
+}
