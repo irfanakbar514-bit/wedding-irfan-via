@@ -41,5 +41,33 @@ function copyAccount() {
         }, 2000);
     });
 }
+// SETTING TANGGAL ACARA (Tahun, Bulan-1, Tanggal, Jam, Menit)
+// Contoh: 31 Desember 2026 (Bulan Desember itu angka 11 di coding)
+const weddingDate = new Date(2026, 11, 31, 09, 0, 0).getTime();
+
+const countdown = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    // Perhitungan waktu
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Tampilkan ke dalam elemen id="timer"
+    document.getElementById("timer").innerHTML = `
+        <div class="timer-box"><span>${days}</span><p>Hari</p></div>
+        <div class="timer-box"><span>${hours}</span><p>Jam</p></div>
+        <div class="timer-box"><span>${minutes}</span><p>Menit</p></div>
+        <div class="timer-box"><span>${seconds}</span><p>Detik</p></div>
+    `;
+
+    // Jika waktu habis
+    if (distance < 0) {
+        clearInterval(countdown);
+        document.getElementById("timer").innerHTML = "<h3>Acara Sedang Berlangsung</h3>";
+    }
+}, 1000);
 
 
