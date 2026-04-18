@@ -84,9 +84,11 @@ section { padding: 80px 20px; text-align: center; max-width: 800px; margin: auto
 @media only screen and (max-width: 768px) {
     body {
         background-attachment: scroll;
-        /* Hapus atau komentari baris background-image: none tadi */
+        /* Hapus baris background-image: none; yang tadi */
+        /* Pastikan jalur fotonya benar di bagian body paling atas */
     }
 }
+
 
     
     body::before {
